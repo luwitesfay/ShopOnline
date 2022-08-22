@@ -134,6 +134,14 @@ namespace ShopOnline
             }
         }
 
+        private void LogOutLabel_Click(object sender, EventArgs e)
+        {
+            Form1 Obj = new Form1();
+            Obj.Show();
+            this.Hide();
+
+        }
+
         private void Resetbutton_Click(object sender, EventArgs e)
         {
             Reset();
