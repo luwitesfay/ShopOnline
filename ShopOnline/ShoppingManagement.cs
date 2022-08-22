@@ -17,6 +17,7 @@ namespace ShopOnline
         {
             InitializeComponent();
             populate();
+            ReciptDataGridView;
         }
 
         SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yonit\Desktop\GroceryShop\GroceryShop.mdf;Integrated Security=True;Connect Timeout=30");
@@ -139,6 +140,14 @@ namespace ShopOnline
                     MessageBox.Show(EX.Message);
                 }
             }
+        }
+
+        public void Calculatate()
+        { 
+            int total = Convert.ToInt32(ItemAmountTextBox.Text) * Convert.ToInt32(ItemPriceTextBox.Text);
+            DataGridViewRow newRow = new DataGridViewRow();
+            newRow.CreateCells(dataGridView: Recipt.ReciptDataGridView);
+
         }
     }
 }

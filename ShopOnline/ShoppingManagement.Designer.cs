@@ -213,9 +213,9 @@
         private Label label5;
         private TextBox itemNameTextBox;
         private TextBox ItemPriceTextBox;
-        private TextBox ItemAmountTextBox;
         private Button UpdateButton;
         private Button DeleteButton;
         private DataGridView ItemsDataGridView;
+        public TextBox ItemAmountTextBox;
     }
 }
