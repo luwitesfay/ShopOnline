@@ -36,7 +36,7 @@ namespace ShopOnline
         private void empoyeeaddbutton_Click(object sender, EventArgs e)
         {
             if (employeenametextBox.Text == "" || employeeaddresstextBox.Text == "" || employeePhonetextBox.Text == "" ||
-                employeeagetextBox.Text == "" )
+                employeeagetextBox.Text == ""  )
             {
                 MessageBox.Show("Please Enter employee infomation to save.");
             }
@@ -45,7 +45,7 @@ namespace ShopOnline
                 try
                 {
                     Conn.Open();
-                    SqlCommand cmd = new SqlCommand("insert into EmployeeInformationTb values('" +employeenametextBox.Text+ "','" +employeeaddresstextBox.Text+ "','" +employeePhonetextBox.Text+ "','" +employeeagetextBox.Text+ "')", Conn);
+                    SqlCommand cmd = new SqlCommand("insert into EmployeeInformationTb values('" +employeenametextBox.Text+ "','" +employeeaddresstextBox.Text+ "','" +employeePhonetextBox.Text+ "','" + employeeagetextBox.Text + "')", Conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee information saved Successfully");
                     Conn.Close();
