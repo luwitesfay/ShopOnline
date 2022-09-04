@@ -36,7 +36,7 @@ namespace ShopOnline
         private void empoyeeaddbutton_Click(object sender, EventArgs e)
         {
             if (employeenametextBox.Text == "" || employeeaddresstextBox.Text == "" || employeePhonetextBox.Text == "" ||
-                employeeagetextBox.Text == ""  )
+                employeeEmailTextBox.Text == ""  )
             {
                 MessageBox.Show("Please Enter employee infomation to save.");
             }
@@ -45,7 +45,7 @@ namespace ShopOnline
                 try
                 {
                     Conn.Open();
-                    SqlCommand cmd = new SqlCommand("insert into EmployeeInformationTb values('" +employeenametextBox.Text+ "','" +employeeaddresstextBox.Text+ "','" +employeePhonetextBox.Text+ "','" + employeeagetextBox.Text + "')", Conn);
+                    SqlCommand cmd = new SqlCommand("insert into EmployeeInformationTb values('" +employeenametextBox.Text+ "','" +employeeaddresstextBox.Text+ "','" +employeePhonetextBox.Text+ "','" + employeeEmailTextBox.Text + "')", Conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee information saved Successfully");
                     Conn.Close();
@@ -64,7 +64,7 @@ namespace ShopOnline
             employeenametextBox.Text = "";
             employeeaddresstextBox.Text = "";
             employeePhonetextBox.Text = "";
-            employeeagetextBox.Text = "";
+            employeeEmailTextBox.Text = "";
             key = 0;
             //employeesocialsecuritytextBox.Text = "";
 
@@ -81,7 +81,7 @@ namespace ShopOnline
             employeenametextBox.Text = employeeDataGridView.SelectedRows[0].Cells[1].Value.ToString();
             employeeaddresstextBox.Text = employeeDataGridView.SelectedRows[0].Cells[2].Value.ToString();
             employeePhonetextBox.Text = employeeDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            employeeagetextBox.Text = employeeDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            employeeEmailTextBox.Text = employeeDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             //employeesocialsecuritytextBox.Text = employeeDataGridView.SelectedRows[0].Cells[5].Value.ToString();
             if(employeenametextBox.Text =="")
             {
@@ -121,7 +121,7 @@ namespace ShopOnline
         private void employeeupdatebutton_Click(object sender, EventArgs e)
         {
             if (employeenametextBox.Text == "" || employeeaddresstextBox.Text == "" || employeePhonetextBox.Text == "" ||
-                employeeagetextBox.Text == "")
+                employeeEmailTextBox.Text == "")
             {
                 MessageBox.Show("Select The Employee To be updated");
             }
@@ -130,7 +130,7 @@ namespace ShopOnline
                 try
                 {
                     Conn.Open();
-                    string query = "Update EmployeeInformationTb set EmployeeName='" + employeenametextBox.Text + "',EmployeeAddress='"+ employeeaddresstextBox.Text + "', EmployeePhoneNumber='"+ employeePhonetextBox.Text + "', EmployeeAge='"+ employeeagetextBox.Text + "' where EmployeeID="+key+";";
+                    string query = "Update EmployeeInformationTb set EmployeeName='" + employeenametextBox.Text + "',EmployeeAddress='"+ employeeaddresstextBox.Text + "', EmployeePhoneNumber='"+ employeePhonetextBox.Text + "', EmployeeAge='"+ employeeEmailTextBox.Text + "' where EmployeeID="+key+";";
                     SqlCommand cmd = new SqlCommand(query, Conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee information updated Successfully");
