@@ -136,7 +136,7 @@ namespace ShopOnline
 
         private void LogOutLabel_Click(object sender, EventArgs e)
         {
-            Form1 Obj = new Form1();
+            LogInPage Obj = new LogInPage();
             Obj.Show();
             this.Hide();
 
