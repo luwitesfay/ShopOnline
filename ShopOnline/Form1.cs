@@ -21,10 +21,10 @@ namespace ShopOnline
         private void loginbutton_Click(object sender, EventArgs e)
         {
             Conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from EmployeeInformationTb where EmployeeName ='" + usernametextBox.Text + "' and EmployeePassword ='" + passwordtextBox.Text + "'", Conn);
+            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from EmployeeInfoTable where Name ='" + usernametextBox.Text + "' and PassWord ='" + passwordtextBox.Text + "'", Conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "")
+            if (dt.Rows[0][0].ToString() == "1")
             {
                 Shoppingwebsite Obj = new Shoppingwebsite();
                 Obj.Show();

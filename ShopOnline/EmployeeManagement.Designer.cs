@@ -30,8 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.EmployeePassowordTextBox = new System.Windows.Forms.TextBox();
+            this.employeePassowordTextBox = new System.Windows.Forms.TextBox();
             this.deletebutton = new System.Windows.Forms.Button();
             this.clearbutton = new System.Windows.Forms.Button();
             this.employeeupdatebutton = new System.Windows.Forms.Button();
@@ -44,10 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.employeeDataGridView);
-            this.panel1.Controls.Add(this.EmployeePassowordTextBox);
+            this.panel1.Controls.Add(this.employeePassowordTextBox);
             this.panel1.Controls.Add(this.deletebutton);
             this.panel1.Controls.Add(this.clearbutton);
             this.panel1.Controls.Add(this.employeeupdatebutton);
@@ -75,6 +75,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1855, 1180);
             this.panel1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(451, 297);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 36);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Email:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(618, 197);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 36);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Address:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(1202, 199);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(212, 36);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Phone Number:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(1016, 304);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 36);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Password:";
             // 
             // employeeDataGridView
             // 
@@ -96,16 +136,16 @@
             this.employeeDataGridView.TabIndex = 24;
             this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
-            // EmployeePassowordTextBox
+            // employeePassowordTextBox
             // 
-            this.EmployeePassowordTextBox.Location = new System.Drawing.Point(1180, 301);
-            this.EmployeePassowordTextBox.Name = "EmployeePassowordTextBox";
-            this.EmployeePassowordTextBox.Size = new System.Drawing.Size(297, 39);
-            this.EmployeePassowordTextBox.TabIndex = 23;
+            this.employeePassowordTextBox.Location = new System.Drawing.Point(1180, 301);
+            this.employeePassowordTextBox.Name = "employeePassowordTextBox";
+            this.employeePassowordTextBox.Size = new System.Drawing.Size(297, 39);
+            this.employeePassowordTextBox.TabIndex = 23;
             // 
             // deletebutton
             // 
-            this.deletebutton.Location = new System.Drawing.Point(802, 464);
+            this.deletebutton.Location = new System.Drawing.Point(802, 446);
             this.deletebutton.Name = "deletebutton";
             this.deletebutton.Size = new System.Drawing.Size(150, 46);
             this.deletebutton.TabIndex = 20;
@@ -115,7 +155,7 @@
             // 
             // clearbutton
             // 
-            this.clearbutton.Location = new System.Drawing.Point(1016, 464);
+            this.clearbutton.Location = new System.Drawing.Point(1016, 446);
             this.clearbutton.Name = "clearbutton";
             this.clearbutton.Size = new System.Drawing.Size(150, 46);
             this.clearbutton.TabIndex = 19;
@@ -125,7 +165,7 @@
             // 
             // employeeupdatebutton
             // 
-            this.employeeupdatebutton.Location = new System.Drawing.Point(563, 464);
+            this.employeeupdatebutton.Location = new System.Drawing.Point(593, 446);
             this.employeeupdatebutton.Name = "employeeupdatebutton";
             this.employeeupdatebutton.Size = new System.Drawing.Size(150, 46);
             this.employeeupdatebutton.TabIndex = 18;
@@ -135,7 +175,7 @@
             // 
             // empoyeeaddbutton
             // 
-            this.empoyeeaddbutton.Location = new System.Drawing.Point(337, 464);
+            this.empoyeeaddbutton.Location = new System.Drawing.Point(367, 446);
             this.empoyeeaddbutton.Name = "empoyeeaddbutton";
             this.empoyeeaddbutton.Size = new System.Drawing.Size(150, 46);
             this.empoyeeaddbutton.TabIndex = 17;
@@ -207,46 +247,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(1016, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 36);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Password:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(1202, 199);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 36);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Phone Number:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(618, 197);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 36);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Address:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(451, 297);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 36);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Email:";
-            // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -279,7 +279,7 @@
         private Button clearbutton;
         private Button employeeupdatebutton;
         private Button empoyeeaddbutton;
-        private TextBox EmployeePassowordTextBox;
+        private TextBox employeePassowordTextBox;
         private DataGridView employeeDataGridView;
         private Label label11;
         private Label label10;
