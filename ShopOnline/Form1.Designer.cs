@@ -146,7 +146,7 @@
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1641, 1014);
+            this.ClientSize = new System.Drawing.Size(1674, 1014);
             this.Controls.Add(this.panel1);
             this.Name = "LogInPage";
             this.Text = "Login Page";
