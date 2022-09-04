@@ -35,7 +35,7 @@ namespace ShopOnline
         private void AddToCartButton_Click(object sender, EventArgs e)
         {
 
-            if (ItemAmountTextBox.Text == "" || itemNameTextBox.Text == "")
+            if (ItemAmountTextBox.Text == "" || Convert.ToInt32(ItemAmountTextBox.Text) > stock)
             {
                 MessageBox.Show("Enter Quantity");
             }
@@ -52,7 +52,7 @@ namespace ShopOnline
                 CartDataGridView.Rows.Add(newRow);
                 GrdTotal = GrdTotal + total;
                 Amount = GrdTotal;
-                labeltotal.Text = GrdTotal.ToString();
+                totalAmountLB.Text ="Total: " + GrdTotal.ToString();
                 n++;
                 UpdateItemcount();
                 Reset();
@@ -84,8 +84,8 @@ namespace ShopOnline
         private void ItemsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            itemNameTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[2].Value.ToString();
-            ItemPriceTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[3].Value.ToString();
+            itemNameTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[3].Value.ToString();
+            ItemPriceTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[4].Value.ToString();
             if (itemNameTextBox.Text == "")
             {
                 stock = 0;
@@ -111,9 +111,9 @@ namespace ShopOnline
 
         private void Reciptbutton_Click(object sender, EventArgs e)
         {
-            if (CustommerNameTextBox.Text == "")
+            if (CustommerNameTextBox.Text == "" || ItemAmountTextBox.Text =="" ||itemNameTextBox.Text =="" )
             {
-                MessageBox.Show("Please Enter employee infomation to save.");
+                MessageBox.Show("Please enter infomation to save.");
             }
             else
             {
@@ -139,6 +139,30 @@ namespace ShopOnline
             LogInPage Obj = new LogInPage();
             Obj.Show();
             this.Hide();
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemAmountTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            LogInPage logInPage = new LogInPage();
+            logInPage.Show();
+            this.Hide();
+
 
         }
 
