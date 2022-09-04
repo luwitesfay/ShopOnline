@@ -31,8 +31,8 @@ namespace ShopOnline
             // if else statement to redirect user to employee page is passowrd match with what is saved
             else if (AdminPasswordTextBox.Text == "Password")
             {
-                EmployeeManagement Employee = new EmployeeManagement();
-                Employee.Show();
+                AdminDashBoard AdminDashBoard = new AdminDashBoard();
+                AdminDashBoard.Show();
                 this.Hide();
 
             //Else statement to show a message if the user enter invalid password

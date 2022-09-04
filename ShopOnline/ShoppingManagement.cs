@@ -140,5 +140,22 @@ namespace ShopOnline
                 }
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemPriceTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            AdminDashBoard AdminDashBoard = new AdminDashBoard();
+            AdminDashBoard.Show();
+            this.Hide();
+        }
     }
 }

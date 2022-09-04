@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,12 +48,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.BackButton);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -71,9 +74,9 @@
             this.panel1.Controls.Add(this.employeenametextBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(32, 93);
+            this.panel1.Location = new System.Drawing.Point(80, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1855, 1180);
+            this.panel1.Size = new System.Drawing.Size(1700, 1085);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -100,7 +103,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(1202, 199);
+            this.label9.Location = new System.Drawing.Point(1163, 198);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(212, 36);
             this.label9.TabIndex = 26;
@@ -118,21 +121,22 @@
             // 
             // employeeDataGridView
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.employeeDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeDataGridView.Location = new System.Drawing.Point(7, 753);
+            this.employeeDataGridView.Location = new System.Drawing.Point(0, 637);
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.employeeDataGridView.RowTemplate.Height = 41;
             this.employeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeeDataGridView.Size = new System.Drawing.Size(1845, 384);
+            this.employeeDataGridView.Size = new System.Drawing.Size(1845, 511);
             this.employeeDataGridView.TabIndex = 24;
             this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
@@ -145,42 +149,50 @@
             // 
             // deletebutton
             // 
-            this.deletebutton.Location = new System.Drawing.Point(802, 446);
+            this.deletebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.deletebutton.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deletebutton.Location = new System.Drawing.Point(929, 433);
             this.deletebutton.Name = "deletebutton";
-            this.deletebutton.Size = new System.Drawing.Size(150, 46);
+            this.deletebutton.Size = new System.Drawing.Size(188, 76);
             this.deletebutton.TabIndex = 20;
-            this.deletebutton.Text = "button1";
-            this.deletebutton.UseVisualStyleBackColor = true;
+            this.deletebutton.Text = "DELETE";
+            this.deletebutton.UseVisualStyleBackColor = false;
             this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
             // 
             // clearbutton
             // 
-            this.clearbutton.Location = new System.Drawing.Point(1016, 446);
+            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.clearbutton.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearbutton.Location = new System.Drawing.Point(1192, 433);
             this.clearbutton.Name = "clearbutton";
-            this.clearbutton.Size = new System.Drawing.Size(150, 46);
+            this.clearbutton.Size = new System.Drawing.Size(197, 76);
             this.clearbutton.TabIndex = 19;
-            this.clearbutton.Text = "button1";
-            this.clearbutton.UseVisualStyleBackColor = true;
+            this.clearbutton.Text = "CLEAR";
+            this.clearbutton.UseVisualStyleBackColor = false;
             this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
             // employeeupdatebutton
             // 
-            this.employeeupdatebutton.Location = new System.Drawing.Point(593, 446);
+            this.employeeupdatebutton.BackColor = System.Drawing.Color.Gold;
+            this.employeeupdatebutton.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.employeeupdatebutton.Location = new System.Drawing.Point(637, 433);
             this.employeeupdatebutton.Name = "employeeupdatebutton";
-            this.employeeupdatebutton.Size = new System.Drawing.Size(150, 46);
+            this.employeeupdatebutton.Size = new System.Drawing.Size(208, 76);
             this.employeeupdatebutton.TabIndex = 18;
-            this.employeeupdatebutton.Text = "button1";
-            this.employeeupdatebutton.UseVisualStyleBackColor = true;
+            this.employeeupdatebutton.Text = "UPDATE";
+            this.employeeupdatebutton.UseVisualStyleBackColor = false;
             this.employeeupdatebutton.Click += new System.EventHandler(this.employeeupdatebutton_Click);
             // 
             // empoyeeaddbutton
             // 
-            this.empoyeeaddbutton.Location = new System.Drawing.Point(367, 446);
+            this.empoyeeaddbutton.BackColor = System.Drawing.Color.LimeGreen;
+            this.empoyeeaddbutton.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.empoyeeaddbutton.Location = new System.Drawing.Point(343, 433);
             this.empoyeeaddbutton.Name = "empoyeeaddbutton";
-            this.empoyeeaddbutton.Size = new System.Drawing.Size(150, 46);
+            this.empoyeeaddbutton.Size = new System.Drawing.Size(207, 76);
             this.empoyeeaddbutton.TabIndex = 17;
-            this.empoyeeaddbutton.Text = "button1";
-            this.empoyeeaddbutton.UseVisualStyleBackColor = true;
+            this.empoyeeaddbutton.Text = "ADD";
+            this.empoyeeaddbutton.UseVisualStyleBackColor = false;
             this.empoyeeaddbutton.Click += new System.EventHandler(this.empoyeeaddbutton_Click);
             // 
             // employeeEmailTextBox
@@ -207,14 +219,14 @@
             // 
             // employeePhonetextBox
             // 
-            this.employeePhonetextBox.Location = new System.Drawing.Point(1437, 198);
+            this.employeePhonetextBox.Location = new System.Drawing.Point(1396, 198);
             this.employeePhonetextBox.Name = "employeePhonetextBox";
             this.employeePhonetextBox.Size = new System.Drawing.Size(330, 39);
             this.employeePhonetextBox.TabIndex = 10;
             // 
             // employeenametextBox
             // 
-            this.employeenametextBox.Location = new System.Drawing.Point(207, 196);
+            this.employeenametextBox.Location = new System.Drawing.Point(247, 199);
             this.employeenametextBox.Name = "employeenametextBox";
             this.employeenametextBox.Size = new System.Drawing.Size(293, 39);
             this.employeenametextBox.TabIndex = 8;
@@ -223,7 +235,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(91, 196);
+            this.label3.Location = new System.Drawing.Point(130, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 36);
             this.label3.TabIndex = 7;
@@ -232,25 +244,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(802, 28);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(700, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 32);
+            this.label1.Size = new System.Drawing.Size(474, 42);
             this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.label1.Text = "Employee Management Page";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(871, 29);
+            this.label2.BackColor = System.Drawing.Color.Green;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Cyan;
+            this.label2.Location = new System.Drawing.Point(784, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 32);
+            this.label2.Size = new System.Drawing.Size(336, 42);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "Grocery Management";
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BackButton.Location = new System.Drawing.Point(1605, 13);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(74, 49);
+            this.BackButton.TabIndex = 29;
+            this.BackButton.Text = "X";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1916, 1318);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -285,5 +314,6 @@
         private Label label10;
         private Label label9;
         private Label label6;
+        private Button BackButton;
     }
 }
