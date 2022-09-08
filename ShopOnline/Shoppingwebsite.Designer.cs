@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shoppingwebsite));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -57,15 +58,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CartDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.searchTextBox);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Controls.Add(this.itemNameTextBox);
             this.panel1.Controls.Add(this.label6);
@@ -171,6 +176,7 @@
             this.Removebutton.TabIndex = 29;
             this.Removebutton.Text = "REMOVE";
             this.Removebutton.UseVisualStyleBackColor = false;
+            this.Removebutton.Click += new System.EventHandler(this.Removebutton_Click);
             // 
             // Reciptbutton
             // 
@@ -207,7 +213,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ItemsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ItemsDataGridView.Location = new System.Drawing.Point(69, 246);
+            this.ItemsDataGridView.Location = new System.Drawing.Point(69, 277);
             this.ItemsDataGridView.Name = "ItemsDataGridView";
             this.ItemsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.ItemsDataGridView.RowTemplate.Height = 41;
@@ -353,6 +359,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Grocery Shopping";
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(1055, 215);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(200, 39);
+            this.searchTextBox.TabIndex = 40;
+            // 
             // Shoppingwebsite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -365,6 +378,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CartDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,8 +390,6 @@
         public DataGridView CartDataGridView;
         private Button AddToCartButton;
         private TextBox ItemAmountTextBox;
-        private TextBox ShopperNameTextBox;
-        private TextBox CustommerNameTextBox;
         private Button Resetbutton;
         private Label label3;
         private Label label2;
@@ -397,5 +409,9 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        public TextBox CustommerNameTextBox;
+        public TextBox ShopperNameTextBox;
+        public TextBox searchTextBox;
+        private BindingSource bindingSource1;
     }
 }

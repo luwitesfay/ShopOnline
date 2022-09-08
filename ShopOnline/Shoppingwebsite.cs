@@ -84,8 +84,8 @@ namespace ShopOnline
         private void ItemsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            itemNameTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[3].Value.ToString();
-            ItemPriceTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+            itemNameTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            ItemPriceTextBox.Text = ItemsDataGridView.SelectedRows[0].Cells[3].Value.ToString();
             if (itemNameTextBox.Text == "")
             {
                 stock = 0;
@@ -93,7 +93,7 @@ namespace ShopOnline
             }
             else
             {
-                stock = Convert.ToInt32(ItemsDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                stock = Convert.ToInt32(ItemsDataGridView.SelectedRows[0].Cells[4].Value.ToString());
                 key = Convert.ToInt32(ItemsDataGridView.SelectedRows[0].Cells[0].Value.ToString());
             }
 
@@ -111,27 +111,9 @@ namespace ShopOnline
 
         private void Reciptbutton_Click(object sender, EventArgs e)
         {
-            if (CustommerNameTextBox.Text == "" || ItemAmountTextBox.Text =="" ||itemNameTextBox.Text =="" )
-            {
-                MessageBox.Show("Please enter infomation to save.");
-            }
-            else
-            {
-                try
-                {
-                    Conn.Open();
-                    SqlCommand cmd = new SqlCommand("insert into ReciptTable values(" + EmployeeId + ",'" + EmployeeName + "','" + CustommerNameTextBox.Text + "'," + Amount + ")", Conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Items information saved Successfully");
-                    Conn.Close();
-                    populate();
-                    //Clear();
-                }
-                catch (Exception EX)
-                {
-                    MessageBox.Show(EX.Message);
-                }
-            }
+            Reecipt reecipt = new Reecipt();
+            reecipt.Show();
+            this.Hide();
         }
 
         private void LogOutLabel_Click(object sender, EventArgs e)
@@ -163,6 +145,12 @@ namespace ShopOnline
             logInPage.Show();
             this.Hide();
 
+
+        }
+
+        private void Removebutton_Click(object sender, EventArgs e)
+        {
+            
 
         }
 
